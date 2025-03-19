@@ -23,6 +23,7 @@ RUN \
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
+
 COPY . .
 
 ARG NEXT_PUBLIC_API_URL
@@ -33,9 +34,6 @@ RUN npm run build
 # 3. Production image, copy all the files and run next
 FROM base AS runner
 WORKDIR /app
-
-ENV NODE_ENV=production
-ENV NEXT_PUBLIC_API_URL=https://api.example.com
 
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
