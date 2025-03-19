@@ -7,7 +7,7 @@ export const Component = () => {
     <div>
       <h1>Component</h1>
 
-     777 {process.env.NEXT_PUBLIC_API_URL} 777
+     888 {process.env.NEXT_PUBLIC_API_URL} 888
     </div>
   )
 }
