@@ -5,7 +5,7 @@ export const Component = () => {
     <div>
       <h1>Component</h1>
 
-      333 {process.env.NEXT_PUBLIC_API_URL} 333
+      555 {process.env.NEXT_PUBLIC_API_URL} 555
     </div>
   )
 }
