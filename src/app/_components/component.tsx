@@ -7,7 +7,7 @@ export const Component = () => {
     <div>
       <h1>Component</h1>
 
-     14 {process.env.NEXT_PUBLIC_API_URL} ,
+     15 {process.env.NEXT_PUBLIC_API_URL} ,
 
      {process.env.NEXT_PUBLIC_API_URL_1}
     </div>
