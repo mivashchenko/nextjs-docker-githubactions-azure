@@ -26,10 +26,10 @@ COPY --from=deps /app/node_modules ./node_modules
 
 COPY . .
 
-#ARG NEXT_PUBLIC_API_URL
-ENV NEXT_PUBLIC_API_URL_1=${NEXT_PUBLIC_API_URL}
+ARG AUTH0_DOMAIN
+ENV NEXT_PUBLIC_API_URL_1=${AUTH0_DOMAIN}
 #
-RUN echo "NEXT_PUBLIC_API_URL=YO_YO_YO" > .env
+RUN echo "NEXT_PUBLIC_API_URL=${AUTH0_DOMAIN}" > .env
 
 RUN npm run build
 
