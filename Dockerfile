@@ -27,7 +27,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 #ARG NEXT_PUBLIC_API_URL
-ENV NEXT_PUBLIC_API_URL_1="PIZDETS"
+ENV NEXT_PUBLIC_API_URL_1=${NEXT_PUBLIC_API_URL}
 #
 RUN echo "NEXT_PUBLIC_API_URL=YO_YO_YO" > .env
 
