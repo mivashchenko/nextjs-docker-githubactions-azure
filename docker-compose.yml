@@ -7,6 +7,6 @@ services:
         context: .
         dockerfile: Dockerfile
     environment:
-        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+        - NEXT_PUBLIC_API_URL=suka
     ports:
       - '3000:3000'
