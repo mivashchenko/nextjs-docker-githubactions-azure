@@ -27,9 +27,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 #ARG NEXT_PUBLIC_API_URL
-#ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+ENV NEXT_PUBLIC_API_URL_1="PIZDETS"
 #
-#RUN echo "NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}" > .env
+RUN echo "NEXT_PUBLIC_API_URL=YO_YO_YO" > .env
 
 RUN npm run build
 
